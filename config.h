@@ -99,7 +99,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -138,7 +138,7 @@ static const char *colorname[] = {
     [4] = "#bd93f9", /* blue    */
     [5] = "#ff79c6", /* magenta */
     [6] = "#8be9fd", /* cyan    */
-    [7] = "#bbbbbb", /* white   */
+    [7] = "#dddddd", /* white   */
 
     /* 8 bright colors */
     [8] = "#44475a",  /* black   */
@@ -175,7 +175,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
@@ -235,8 +235,8 @@ static Shortcut shortcuts[] = {
     {TERMMOD, XK_Y, selpaste, {.i = 0}},
     {ShiftMask, XK_Insert, selpaste, {.i = 0}},
     {TERMMOD, XK_Num_Lock, numlock, {.i = 0}},
-    {MODKEY, XK_k, kscrollup, {.i = 1}},
-    {MODKEY, XK_j, kscrolldown, {.i = 1}},
+    {MODKEY, XK_u, kscrollup, {.i = 1}},
+    {MODKEY, XK_w, kscrolldown, {.i = 1}},
     {MODKEY | TERMMOD, XK_u, kscrollup, {.i = -1}},
     {MODKEY | TERMMOD, XK_e, kscrolldown, {.i = -1}},
 };
