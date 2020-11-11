@@ -10,8 +10,8 @@
 // static char *font =
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 static char *font =
-    "FiraCode Nerd Font "
-    "Mono:pixelsize=20:antialias=true:autohint=true:style=medium";
+    "Fira Code Nerd Font "
+    "Mono:pixelsize=22:antialias=true:autohint=true:style=medium";
 static int borderpx = 2;
 
 /*
@@ -100,7 +100,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -152,8 +152,8 @@ static const char *colorname[] = {
     [15] = "#ffffff", /* white   */
 
     /* special colors */
-    //[256] = "#282a36", /* background */
-    [256] = "#222222", /* background */
+    [256] = "#282a36", /* background */
+    //[256] = "#222222", [> background <]
     [257] = "#f8f8f2", /* foreground */
 };
 
@@ -182,8 +182,8 @@ static unsigned int cursorshape = 4;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 90;
+static unsigned int rows = 26;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -210,6 +210,12 @@ static uint forcemousemod = ShiftMask;
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
+    /* mask                 button   function        argument       release */
+    {XK_ANY_MOD, Button4, kscrollup, {.i = 1}, 0, /* !alt */ -1},
+    {XK_ANY_MOD, Button5, kscrolldown, {.i = 1}, 0, /* !alt */ -1},
+    {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},
+    {XK_ANY_MOD, Button4, ttysend, {.s = "\031"}},
+    {XK_ANY_MOD, Button5, ttysend, {.s = "\005"}},
     /* mask                 button   function        argument       release */
     {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},
     {ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}},
