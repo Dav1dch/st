@@ -89,6 +89,7 @@ void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
 void toggleprinter(const Arg *);
+void copyurl(const Arg *);
 
 int tattrset(int);
 int tisaltscr(void);
@@ -115,6 +116,12 @@ size_t utf8encode(Rune, char *);
 void *xmalloc(size_t);
 void *xrealloc(void *, size_t);
 char *xstrdup(char *);
+
+// from @LukeSmithxyz
+void externalpipe(const Arg *);
+
+// from @LukeSmithxyz
+void externalpipe(const Arg *);
 
 /* config.h globals */
 extern char *utmp;
