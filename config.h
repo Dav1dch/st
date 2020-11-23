@@ -11,7 +11,7 @@
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 static char *font =
     "Fira Code Nerd Font "
-    "Mono:pixelsize=20:antialias=true:autohint=true:style=medium";
+    "Mono:pixelsize=17:antialias=true:autohint=true:style=medium";
 static int borderpx = 2;
 
 /*
@@ -100,7 +100,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.92;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
