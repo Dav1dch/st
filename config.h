@@ -10,7 +10,7 @@
 // static char *font =
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 static char *font =
-    "Fira Code Nerd Font "
+    "FuraCode Nerd Font "
     "Mono:pixelsize=17:antialias=true:autohint=true:style=medium";
 static int borderpx = 2;
 
@@ -153,7 +153,7 @@ static const char *colorname[] = {
 
     /* special colors */
     [256] = "#282a36", /* background */
-    //[256] = "#323232", [> background <]
+    //[256] = "#222222", /* background */
     [257] = "#f8f8f2", /* foreground */
 };
 
