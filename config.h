@@ -10,8 +10,8 @@
 // static char *font =
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 static char *font =
-    "FuraCode Nerd Font "
-    "Mono:pixelsize=17:antialias=true:autohint=true:style=medium";
+    "Fira Code Nerd Font Mono"
+    ":pixelsize=19:antialias=true:autohint=true:style:bold";
 static int borderpx = 2;
 
 /*
