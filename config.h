@@ -9,9 +9,8 @@
 // Pro:pixelsize=17:antialias=true:autohint=true";
 // static char *font =
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
-static char *font =
-    "Fira Code Nerd Font Mono"
-    ":pixelsize=19:antialias=true:autohint=true:style:bold";
+static char *font = "MonacoB Nerd Font Mono"
+                    ":pixelsize=18:antialias=true:autohint=true:style:bold";
 static int borderpx = 2;
 
 /*
@@ -100,37 +99,10 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.92;
+float alpha = 0.85;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    // 	/* 8 normal colors */
-    // 	"black",
-    // 	"red3",
-    // 	"green3",
-    // 	"yellow3",
-    // 	"blue2",
-    // 	"magenta3",
-    // 	"cyan3",
-    // 	"gray90",
-
-    // 	/* 8 bright colors */
-    // 	"gray50",
-    // 	"red",
-    // 	"green",
-    // 	"yellow",
-    // 	"#5c5cff",
-    // 	"magenta",
-    // 	"cyan",
-    // 	"white",
-
-    // 	[255] = 0,
-
-    // 	/* more colors can be added after 255 to use with DefaultXX */
-    // 	"#cccccc",
-    // 	"#555555",
-    // 	"black",
-    // };
     /* 8 normal colors */
     [0] = "#000000", /* black   */
     [1] = "#ff5555", /* red     */
@@ -142,7 +114,8 @@ static const char *colorname[] = {
     [7] = "#dddddd", /* white   */
 
     /* 8 bright colors */
-    [8] = "#44475a",  /* black   */
+    //[8] = "#44475a",  [> black   <]
+    [8] = "#8d8d8d",  /* black   */
     [9] = "#ff5555",  /* red     */
     [10] = "#50fa7b", /* green   */
     [11] = "#f1fa8c", /* yellow  */
@@ -153,7 +126,6 @@ static const char *colorname[] = {
 
     /* special colors */
     [256] = "#282a36", /* background */
-    //[256] = "#222222", /* background */
     [257] = "#f8f8f2", /* foreground */
 };
 
@@ -168,6 +140,22 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
+
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor
+ */
+// static unsigned int defaultfg = 257;
+// static unsigned int defaultbg = 256;
+// static unsigned int defaultcs = 257;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
