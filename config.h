@@ -9,8 +9,8 @@
 // Pro:pixelsize=17:antialias=true:autohint=true";
 // static char *font =
 //    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
-static char *font = "MonacoB Nerd Font Mono"
-                    ":pixelsize=18:antialias=true:autohint=true:style:bold";
+static char *font = "JetBrains Mono Nerd Font"
+                    ":pixelsize=17:antialias=true:autohint=true:style:bold";
 static int borderpx = 2;
 
 /*
@@ -103,29 +103,55 @@ float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+    //[> 8 normal colors <]
+    //[0] = "#000000", [> black   <]
+    //[1] = "#ff5555", [> red     <]
+    //[2] = "#50fa7b", [> green   <]
+    //[3] = "#f1fa8c", [> yellow  <]
+    //[4] = "#bd93f9", [> blue    <]
+    //[5] = "#ff79c6", [> magenta <]
+    //[6] = "#8be9fd", [> cyan    <]
+    //[7] = "#dddddd", [> white   <]
+
+    //[> 8 bright colors <]
+    ////[8] = "#44475a",  [> black   <]
+    //[8] = "#8d8d8d",  [> black   <]
+    //[9] = "#ff5555",  [> red     <]
+    //[10] = "#50fa7b", [> green   <]
+    //[11] = "#f1fa8c", [> yellow  <]
+    //[12] = "#bd93f9", [> blue    <]
+    //[13] = "#ff79c6", [> magenta <]
+    //[14] = "#8be9fd", [> cyan    <]
+    //[15] = "#ffffff", [> white   <]
+
+    //[> special colors <]
+    //[256] = "#2d2d2d", [> background <]
+    ////[256] = "#282a36", [> background <]
+    //[257] = "#f8f8f2", [> foreground <]
+
     /* 8 normal colors */
-    [0] = "#000000", /* black   */
-    [1] = "#ff5555", /* red     */
-    [2] = "#50fa7b", /* green   */
+    [0] = "#1E2127", /* black   */
+    [1] = "#E06C75", /* red     */
+    [2] = "#98C379", /* green   */
     [3] = "#f1fa8c", /* yellow  */
-    [4] = "#bd93f9", /* blue    */
-    [5] = "#ff79c6", /* magenta */
-    [6] = "#8be9fd", /* cyan    */
-    [7] = "#dddddd", /* white   */
+    [4] = "#61AfEF", /* blue    */
+    [5] = "#C678DD", /* magenta */
+    [6] = "#56B6C2", /* cyan    */
+    [7] = "#ABB2BF", /* white   */
 
     /* 8 bright colors */
     //[8] = "#44475a",  [> black   <]
-    [8] = "#8d8d8d",  /* black   */
-    [9] = "#ff5555",  /* red     */
-    [10] = "#50fa7b", /* green   */
-    [11] = "#f1fa8c", /* yellow  */
-    [12] = "#bd93f9", /* blue    */
-    [13] = "#ff79c6", /* magenta */
-    [14] = "#8be9fd", /* cyan    */
+    [8] = "#383A42",  /* black   */
+    [9] = "#E45649",  /* red     */
+    [10] = "#50A14F", /* green   */
+    [11] = "#986801", /* yellow  */
+    [12] = "#4078F2", /* blue    */
+    [13] = "#A626A4", /* magenta */
+    [14] = "#0184BC", /* cyan    */
     [15] = "#ffffff", /* white   */
 
     /* special colors */
-    [256] = "#222222", /* background */
+    [256] = "#1E2127", /* background */
     //[256] = "#282a36", [> background <]
     [257] = "#f8f8f2", /* foreground */
 };
