@@ -8,9 +8,9 @@
 // static char *font = "Source Code
 // Pro:pixelsize=17:antialias=true:autohint=true";
 // static char *font =
-//    "MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
-static char *font = "JetBrains Mono Nerd Font"
-                    ":pixelsize=17:antialias=true:autohint=true:style:bold";
+//"MonacoB2 Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
+static char *font = "anonymice nerd font mono"
+                    ":pixelsize=22:antialias=true:autohint=true:style:bold";
 static int borderpx = 2;
 
 /*
@@ -99,7 +99,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.93;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -132,7 +132,7 @@ static const char *colorname[] = {
     /* 8 normal colors */
     [0] = "#1E2127", /* black   */
     [1] = "#E06C75", /* red     */
-    [2] = "#98C379", /* green   */
+    [2] = "#78dd39", /* green   */
     [3] = "#f1fa8c", /* yellow  */
     [4] = "#61AfEF", /* blue    */
     [5] = "#C678DD", /* magenta */
@@ -145,7 +145,7 @@ static const char *colorname[] = {
     [9] = "#E45649",  /* red     */
     [10] = "#50A14F", /* green   */
     [11] = "#986801", /* yellow  */
-    [12] = "#4078F2", /* blue    */
+    [12] = "#3078F2", /* blue    */
     [13] = "#A626A4", /* magenta */
     [14] = "#0184BC", /* cyan    */
     [15] = "#ffffff", /* white   */
@@ -362,7 +362,8 @@ static Key key[] = {
     {XK_KP_Delete, ControlMask, "\033[3;5~", +1, 0},
     {XK_KP_Delete, ShiftMask, "\033[2K", -1, 0},
     {XK_KP_Delete, ShiftMask, "\033[3;2~", +1, 0},
-    {XK_KP_Delete, XK_ANY_MOD, "\033[P", -1, 0},
+    //{XK_KP_Delete, XK_ANY_MOD, "\033[P", -1, 0},
+    {XK_KP_Delete, XK_ANY_MOD, "\033[3~", -1, 0},
     {XK_KP_Delete, XK_ANY_MOD, "\033[3~", +1, 0},
     {XK_KP_Multiply, XK_ANY_MOD, "\033Oj", +2, 0},
     {XK_KP_Add, XK_ANY_MOD, "\033Ok", +2, 0},
@@ -430,7 +431,8 @@ static Key key[] = {
     {XK_Delete, ControlMask, "\033[3;5~", +1, 0},
     {XK_Delete, ShiftMask, "\033[2K", -1, 0},
     {XK_Delete, ShiftMask, "\033[3;2~", +1, 0},
-    {XK_Delete, XK_ANY_MOD, "\033[P", -1, 0},
+    {XK_Delete, XK_ANY_MOD, "\033[3~", -1, 0},
+    //{XK_Delete, XK_ANY_MOD, "\033[P", -1, 0},
     {XK_Delete, XK_ANY_MOD, "\033[3~", +1, 0},
     {XK_BackSpace, XK_NO_MOD, "\177", 0, 0},
     {XK_BackSpace, Mod1Mask, "\033\177", 0, 0},
