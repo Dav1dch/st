@@ -12,8 +12,9 @@
 // static char *font = "JetBrainsMono Nerd Font"
 //":pixelsize=15:antialias=true:autohint=true:style:Medium";
 static int borderpx = 2;
-static char *font = {"JetBrainsMono Nerd Font "
-                     "Mono:pixelsize=16:style:bold"};
+static char *font = {"DroidSansMono Nerd Font"
+                     "Mono:pixelsize=17:style:bold",
+                     "JoyPixels:pixelsize=12:antialias=true:autohint=true"};
 
 /* Spare fonts */
 static char *font2[] = {
@@ -41,7 +42,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.0;
+static float chscale = 1.05;
 
 /*
  * word delimiter string
@@ -108,34 +109,53 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.82;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
     /* 8 normal colors */
-    [0] = "#000000", /* black   */
-    [1] = "#ff5555", /* red     */
-    [2] = "#50fa7b", /* green   */
-    [3] = "#f1fa8c", /* yellow  */
-    [4] = "#bd93f9", /* blue    */
-    [5] = "#ff79c6", /* magenta */
-    [6] = "#8be9fd", /* cyan    */
-    [7] = "#dddddd", /* white   */
+    // [0] = "#000000", /* black   */
+    // [1] = "#ff5555", /* red     */
+    // [2] = "#50fa7b", /* green   */
+    // [3] = "#f1fa8c", /* yellow  */
+    // [4] = "#bd93f9", /* blue    */
+    // [5] = "#ff79c6", /* magenta */
+    // [6] = "#8be9fd", /* cyan    */
+    // [7] = "#dddddd", /* white   */
 
-    /* 8 bright colors */
-    [8] = "#8d8d8d",  /* black   */
-    [9] = "#ff5555",  /* red     */
-    [10] = "#50fa7b", /* green   */
-    [11] = "#f1fa8c", /* yellow  */
-    [12] = "#bd93f9", /* blue    */
-    [13] = "#ff79c6", /* magenta */
-    [14] = "#8be9fd", /* cyan    */
-    [15] = "#ffffff", /* white   */
+    // /* 8 bright colors */
+    // [8] = "#8d8d8d",  /* black   */
+    // [9] = "#ff5555",  /* red     */
+    // [10] = "#50fa7b", /* green   */
+    // [11] = "#f1fa8c", /* yellow  */
+    // [12] = "#bd93f9", /* blue    */
+    // [13] = "#ff79c6", /* magenta */
+    // [14] = "#8be9fd", /* cyan    */
+    // [15] = "#ffffff", /* white   */
 
     /* special colors */
     //[256] = "#2d2d2d", [> background <]
-    [256] = "#1E2127", /* background */
-    [257] = "#f8f8f2", /* foreground */
+    [256] = "#101216", /* background */
+    [257] = "#dedede", /* foreground */
+    /* 8 normal colors */
+    [0] = "#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
+    [1] = "#d56044", /* red     */
+    [2] = "#34b142", /* green   */
+    [3] = "#c19120", /* yellow  */
+    [4] = "#4a82d6", /* blue    */
+    [5] = "#b94080", /* magenta */
+    [6] = "#095276", /* cyan    */
+    [7] = "#cdcdcd", /* white   */
+
+    /* 8 bright colors */
+    [8] = "#4d4d4d",  /* black   */
+    [9] = "#f78166",  /* red     */
+    [10] = "#56d364", /* green   */
+    [11] = "#e3b341", /* yellow  */
+    [12] = "#6ca4f8", /* blue    */
+    [13] = "#db61a2", /* magenta */
+    [14] = "#2b7489", /* cyan    */
+    [15] = "#ffffff", /* white   */
 
     /* 8 normal colors */
     //[0] = "#1E2127", [> black   <]
